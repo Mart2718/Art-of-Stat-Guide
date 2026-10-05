@@ -1,0 +1,319 @@
+{
+  "start": "start",
+  "nodes": {
+    "start": {
+      "question": "What are you trying to do?",
+      "hint": "Choose the task described in your assignment.",
+      "options": [
+        {
+          "label": "Describe or graph data",
+          "next": "describe"
+        },
+        {
+          "label": "Find a probability or cutoff",
+          "next": "probability"
+        },
+        {
+          "label": "Estimate with a confidence interval",
+          "next": "estimate"
+        },
+        {
+          "label": "Test a claim or compare groups",
+          "next": "test"
+        },
+        {
+          "label": "Model a relationship or predict",
+          "next": "relationship"
+        }
+      ]
+    },
+    "describe": {
+      "question": "What kind of data do you have?",
+      "hint": "Quantitative data are numerical measurements or counts. Categorical data are labels or groups.",
+      "options": [
+        {
+          "label": "Quantitative: I need summary statistics",
+          "next": "r-summary"
+        },
+        {
+          "label": "Quantitative: I need a graph",
+          "next": "r-graphs"
+        },
+        {
+          "label": "Categorical: I need counts or a bar graph",
+          "next": "r-categorical"
+        }
+      ]
+    },
+    "probability": {
+      "question": "What does the problem give you?",
+      "hint": "Distinguish finding an area from finding a value.",
+      "options": [
+        {
+          "label": "Outcomes x and probabilities P(x): find the mean",
+          "next": "r-expected"
+        },
+        {
+          "label": "A fixed number of trials and a success probability",
+          "next": "r-binomial"
+        },
+        {
+          "label": "A normal distribution and boundary value(s)",
+          "next": "r-normal"
+        },
+        {
+          "label": "A normal distribution and a percentile or tail probability",
+          "next": "r-percentile"
+        }
+      ]
+    },
+    "estimate": {
+      "question": "Are you estimating a mean or a proportion?",
+      "hint": "A mean summarizes a quantitative measurement. A proportion summarizes the share in a category.",
+      "options": [
+        {
+          "label": "A mean (average)",
+          "next": "estimate-mean"
+        },
+        {
+          "label": "A proportion (percentage)",
+          "next": "estimate-proportion"
+        }
+      ]
+    },
+    "estimate-mean": {
+      "question": "How many samples are involved?",
+      "hint": "This guide currently includes a confidence-interval example for one mean.",
+      "options": [
+        {
+          "label": "One sample",
+          "next": "r-one-mean-ci"
+        },
+        {
+          "label": "Two samples or paired data",
+          "next": "missing-mean-ci"
+        }
+      ]
+    },
+    "estimate-proportion": {
+      "question": "How many proportions are involved?",
+      "hint": "Use two proportions for a difference between two independent groups.",
+      "options": [
+        {
+          "label": "One population proportion",
+          "next": "r-one-prop-ci"
+        },
+        {
+          "label": "Two population proportions",
+          "next": "r-two-prop-ci"
+        }
+      ]
+    },
+    "test": {
+      "question": "What is the claim about?",
+      "hint": "Focus on the kind of variable and the population quantity in the claim.",
+      "options": [
+        {
+          "label": "A proportion or difference in proportions",
+          "next": "test-proportion"
+        },
+        {
+          "label": "A mean or difference in means",
+          "next": "test-mean"
+        },
+        {
+          "label": "A categorical distribution or association",
+          "next": "test-categorical"
+        }
+      ]
+    },
+    "test-proportion": {
+      "question": "How many population proportions?",
+      "hint": "For two proportions, the samples should be independent.",
+      "options": [
+        {
+          "label": "One proportion",
+          "next": "r-one-prop-test"
+        },
+        {
+          "label": "Two proportions",
+          "next": "r-two-prop-test"
+        }
+      ]
+    },
+    "test-mean": {
+      "question": "How are your groups related?",
+      "hint": "Paired data are repeated measurements on the same people or matched pairs.",
+      "options": [
+        {
+          "label": "One sample mean",
+          "next": "missing-one-mean-test"
+        },
+        {
+          "label": "Two independent groups",
+          "next": "r-independent"
+        },
+        {
+          "label": "Two paired / matched measurements",
+          "next": "r-paired"
+        },
+        {
+          "label": "Three or more independent groups",
+          "next": "r-anova"
+        }
+      ]
+    },
+    "test-categorical": {
+      "question": "How many categorical variables?",
+      "hint": "One variable has a category distribution. Two variables can have an association.",
+      "options": [
+        {
+          "label": "One: compare counts to a claimed distribution",
+          "next": "r-gof"
+        },
+        {
+          "label": "Two: test whether the variables are associated",
+          "next": "r-independence"
+        }
+      ]
+    },
+    "relationship": {
+      "question": "What kinds of variables are involved?",
+      "hint": "A numerical code used as a label is still categorical.",
+      "options": [
+        {
+          "label": "Two quantitative variables: predict y from x",
+          "next": "r-regression"
+        },
+        {
+          "label": "Two categorical variables: examine association",
+          "next": "r-independence"
+        },
+        {
+          "label": "One category variable and quantitative measurements",
+          "next": "test-mean"
+        }
+      ]
+    },
+    "r-summary": {
+      "tools": [
+        "summary"
+      ],
+      "explanation": "Summarize the center and spread of one quantitative variable."
+    },
+    "r-graphs": {
+      "tools": [
+        "graphs"
+      ],
+      "explanation": "Display the distribution of quantitative observations."
+    },
+    "r-categorical": {
+      "tools": [
+        "categorical"
+      ],
+      "explanation": "Summarize category frequencies."
+    },
+    "r-expected": {
+      "tools": [
+        "expected-value"
+      ],
+      "explanation": "The expected value is the mean of a discrete probability distribution."
+    },
+    "r-binomial": {
+      "tools": [
+        "binomial"
+      ],
+      "explanation": "Use a binomial model when trials are independent, each has two outcomes, and the success probability stays the same."
+    },
+    "r-normal": {
+      "tools": [
+        "normal-probability"
+      ],
+      "explanation": "You have a boundary value and want the corresponding area or probability."
+    },
+    "r-percentile": {
+      "tools": [
+        "normal-percentile"
+      ],
+      "explanation": "You have an area or percentile and want the corresponding cutoff value."
+    },
+    "r-one-mean-ci": {
+      "tools": [
+        "one-mean-interval"
+      ],
+      "explanation": "Estimate one population mean using sample information."
+    },
+    "r-one-prop-ci": {
+      "tools": [
+        "one-proportion-interval"
+      ],
+      "explanation": "Estimate one population proportion."
+    },
+    "r-two-prop-ci": {
+      "tools": [
+        "two-proportion-interval"
+      ],
+      "explanation": "Estimate a difference between two independent population proportions."
+    },
+    "r-one-prop-test": {
+      "tools": [
+        "one-proportion-test"
+      ],
+      "explanation": "Test a claim about one population proportion."
+    },
+    "r-two-prop-test": {
+      "tools": [
+        "two-proportion-test"
+      ],
+      "explanation": "Test a difference between two independent population proportions."
+    },
+    "r-independent": {
+      "tools": [
+        "independent-t"
+      ],
+      "explanation": "Compare means from two independent groups."
+    },
+    "r-paired": {
+      "tools": [
+        "paired-t"
+      ],
+      "explanation": "Analyze the differences within matched pairs."
+    },
+    "r-anova": {
+      "tools": [
+        "anova"
+      ],
+      "explanation": "Compare means across three or more independent groups."
+    },
+    "r-gof": {
+      "tools": [
+        "chi-gof"
+      ],
+      "explanation": "Compare observed category counts with a hypothesized distribution for one variable."
+    },
+    "r-independence": {
+      "tools": [
+        "chi-independence"
+      ],
+      "explanation": "Test an association between two categorical variables."
+    },
+    "r-regression": {
+      "tools": [
+        "regression"
+      ],
+      "explanation": "Fit a linear model to paired quantitative observations."
+    },
+    "missing-one-mean-test": {
+      "tools": [],
+      "explanation": "Your original guide does not yet include a one-sample t-test resource. Ask your instructor for the assigned tool and procedure."
+    },
+    "missing-mean-ci": {
+      "tools": [],
+      "explanation": "Your original guide does not yet include an interval tutorial for two means or paired differences. Ask your instructor for the assigned procedure. The independent and paired t-test cards below may help you distinguish the sample types.",
+      "related": [
+        "independent-t",
+        "paired-t"
+      ]
+    }
+  }
+}

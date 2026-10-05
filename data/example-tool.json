@@ -1,0 +1,25 @@
+{
+  "id": "your-new-tool-id",
+  "category": "describe",
+  "title": "Your new tool title",
+  "useWhen": "Describe when to use this tool.",
+  "appName": "Exact app name",
+  "appUrl": "https://artofstat.com/web-apps",
+  "location": "Exploratory Data Analysis",
+  "steps": [
+    "First step.",
+    "Second step."
+  ],
+  "interpret": "Explain how to interpret the output.",
+  "videos": [
+    {
+      "label": "Watch the example",
+      "url": "https://replace-with-your-real-video-url"
+    }
+  ],
+  "screenshots": [],
+  "courseNote": "",
+  "inputs": "List the information students need.",
+  "keywords": "search terms",
+  "objectiveCodes": []
+}

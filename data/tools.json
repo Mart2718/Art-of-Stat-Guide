@@ -1,0 +1,597 @@
+{
+  "site": {
+    "title": "Art of Stat Student Hub",
+    "course": "STAT C1000",
+    "subtitle": "Find your tool. Follow the steps. Make sense of the result.",
+    "updated": "2026-10-04",
+    "introVideo": "https://youtu.be/qNy4MIkYrHE"
+  },
+  "categories": [
+    {
+      "id": "describe",
+      "title": "Describe & graph data",
+      "description": "See the shape, center, and spread of your data."
+    },
+    {
+      "id": "probability",
+      "title": "Find probabilities",
+      "description": "Connect a distribution to chances, cutoffs, and long-run averages."
+    },
+    {
+      "id": "estimate",
+      "title": "Estimate with an interval",
+      "description": "Use a sample to estimate a population value."
+    },
+    {
+      "id": "test",
+      "title": "Test a claim",
+      "description": "Evaluate evidence about a population or compare groups."
+    },
+    {
+      "id": "relationships",
+      "title": "Explore relationships",
+      "description": "Model how two quantitative variables move together."
+    }
+  ],
+  "tools": [
+    {
+      "id": "summary",
+      "category": "describe",
+      "title": "Summary statistics",
+      "useWhen": "You need the mean, median, standard deviation, five-number summary, or IQR.",
+      "appName": "Explore Quantitative Data",
+      "appUrl": "https://artofstat.com/web-apps",
+      "location": "Exploratory Data Analysis",
+      "steps": [
+        "Choose the Single Variable tab. Under Enter Data, select Your Own.",
+        "Select Individual Observations if you have a list of data values.",
+        "Enter the variable name and paste your observations into the entry box.",
+        "Read the Descriptive Statistics table for the mean, standard deviation, five-number summary, and IQR."
+      ],
+      "interpret": "Identify the center and spread, and explain what they mean in the units of your variable.",
+      "videos": [
+        {
+          "label": "Watch the example",
+          "url": "https://youtu.be/Sa38lR-s4vs"
+        }
+      ],
+      "screenshots": [
+        {
+          "src": "assets/summary-setup.png",
+          "alt": "Quantitative data app with Your Own data and Individual Observations selected. The descriptive statistics table reports n = 27, mean 67,648, sample standard deviation 27,676, minimum 25,000, Q1 40,000, median 64,000, Q3 85,000, maximum 140,000, and IQR 45,000; a histogram and boxplot appear beside it.",
+          "featured": true,
+          "caption": "Example calculator screen. Your assignment’s data and settings may differ."
+        }
+      ],
+      "courseNote": "",
+      "inputs": "A list of quantitative observations.",
+      "keywords": "five number summary quartiles median mean standard deviation IQR S6",
+      "objectiveCodes": []
+    },
+    {
+      "id": "graphs",
+      "category": "describe",
+      "title": "Histograms, boxplots & dotplots",
+      "useWhen": "You want to visualize the distribution of a quantitative variable.",
+      "appName": "Explore Quantitative Data",
+      "appUrl": "https://artofstat.com/web-apps",
+      "location": "Exploratory Data Analysis",
+      "steps": [
+        "Under Enter Data, select Your Own and choose Individual Observations for a list of data values.",
+        "Enter the variable name and paste your observations into the entry box.",
+        "Under Choose Type of Plot, check Histogram, Boxplot, or Dotplot as needed. Stem & Leaf is also available.",
+        "For a histogram, adjust Select Binwidth for Histogram if your assignment asks for a particular bin width."
+      ],
+      "interpret": "Describe shape, center, spread, and any unusual values. Check the axis labels and units.",
+      "videos": [
+        {
+          "label": "Watch the example",
+          "url": "https://youtu.be/uUNX-V4H9lE"
+        }
+      ],
+      "screenshots": [
+        {
+          "src": "assets/graphs-setup.png",
+          "alt": "Quantitative data app with Histogram, Boxplot, Dotplot, and Stem & Leaf selected, showing all four displays for 27 observations.",
+          "featured": true,
+          "caption": "Example calculator screen. Your assignment’s data and settings may differ."
+        }
+      ],
+      "courseNote": "",
+      "inputs": "A list of quantitative observations.",
+      "keywords": "histogram box plot dot plot numeric numerical",
+      "objectiveCodes": []
+    },
+    {
+      "id": "categorical",
+      "category": "describe",
+      "title": "Bar graphs & frequency tables",
+      "useWhen": "Your observations are categories and you want counts or proportions.",
+      "appName": "Explore Categorical Data",
+      "appUrl": "https://artofstat.com/web-apps",
+      "location": "Exploratory Data Analysis",
+      "steps": [
+        "Choose the One Categorical Variable tab.",
+        "Under Enter Data, select Individual Observations when entering category labels.",
+        "Enter the variable name, then paste category labels into the observations box; the app accepts observations separated by spaces or pasted from a spreadsheet column.",
+        "Read the Frequency Table and Bar Graph. Plot Percent changes the graph from counts to percentages."
+      ],
+      "interpret": "Explain which categories are most common and whether you are comparing counts or proportions.",
+      "videos": [
+        {
+          "label": "Watch the example",
+          "url": "https://youtu.be/rxkB5eVj6EA"
+        }
+      ],
+      "screenshots": [
+        {
+          "src": "assets/categorical-setup.png",
+          "alt": "One Categorical Variable tab with Individual Observations selected. The frequency table and bar graph show no: 25, yes: 9, and maybe: 5, for a total of 39 observations; Pareto Chart is checked.",
+          "featured": true,
+          "caption": "Example calculator screen. Your assignment’s data and settings may differ."
+        }
+      ],
+      "courseNote": "The example has Pareto Chart checked, which orders bars by frequency. Use the bar-chart settings requested in your assignment.",
+      "inputs": "Category labels or category counts, as requested by the app.",
+      "keywords": "categorical frequency bar graph",
+      "objectiveCodes": []
+    },
+    {
+      "id": "expected-value",
+      "category": "probability",
+      "title": "Expected value",
+      "useWhen": "You have a discrete probability distribution and need its long-run mean.",
+      "appName": "Sampling Distribution of the Sample Mean (Discrete Population)",
+      "appUrl": "https://artofstat.com/web-apps",
+      "location": "Sampling Distributions and the Central Limit Theorem",
+      "steps": [
+        "Under Select Population Distribution, choose Build Custom Distribution.",
+        "Enter the Number of distinct values (the number of possible outcomes).",
+        "Double-click or double-tap each table cell to enter the outcomes x and probabilities P(x). Check that Total equals 1.",
+        "Read the population mean μ above the Population Distribution graph; this is the expected value. The graph also shows the population standard deviation σ."
+      ],
+      "interpret": "The expected value is the long-run average over many repetitions; it need not be a possible single outcome.",
+      "videos": [
+        {
+          "label": "Watch the example",
+          "url": "https://youtu.be/HIccJ9W_Clk"
+        }
+      ],
+      "screenshots": [
+        {
+          "src": "assets/expected-value-setup.png",
+          "alt": "Custom discrete distribution with outcomes 1 through 5 and probabilities 0.230, 0.110, 0.110, 0.130, and 0.420, totaling 1. The population graph shows mean 3.4 and standard deviation 1.64.",
+          "featured": true,
+          "caption": "Example calculator screen. Your assignment’s data and settings may differ."
+        }
+      ],
+      "courseNote": "For expected value, use the population mean above the graph. You do not need to click Draw Sample(s); the sample-size and simulation controls serve a different task. Probabilities must be between 0 and 1 and total 1. The original guide notes that calculations may take 30 seconds or more.",
+      "inputs": "The possible outcomes x and their probabilities P(x).",
+      "keywords": "expected value discrete probability distribution mean E(x)",
+      "objectiveCodes": []
+    },
+    {
+      "id": "binomial",
+      "category": "probability",
+      "title": "Binomial probabilities",
+      "useWhen": "You count successes in a fixed number of independent trials with the same success probability.",
+      "appName": "Binomial Distribution",
+      "appUrl": "https://artofstat.com/web-apps",
+      "location": "Distributions: Explore Shapes & Find Probabilities",
+      "steps": [
+        "Choose Find Probabilities.",
+        "Enter the number of trials n and success probability p.",
+        "Enter x and choose the inequality that matches the question."
+      ],
+      "interpret": "Translate the result into a sentence about the number of successes. Check whether the question says exactly, at least, or at most.",
+      "videos": [
+        {
+          "label": "Watch the example",
+          "url": "https://youtu.be/2CYwiHrE4D0"
+        }
+      ],
+      "screenshots": [
+        {
+          "src": "assets/image14.png",
+          "alt": "Binomial distribution app tabs, including Find Probabilities."
+        }
+      ],
+      "courseNote": "",
+      "inputs": "Number of trials n, success probability p, and success count x.",
+      "keywords": "binomial exactly at least at most successes",
+      "objectiveCodes": []
+    },
+    {
+      "id": "normal-probability",
+      "category": "probability",
+      "title": "Normal probabilities",
+      "useWhen": "You know a value or interval and want the probability or area for a normal distribution.",
+      "appName": "Normal Distribution",
+      "appUrl": "https://artofstat.com/web-apps",
+      "location": "Distributions: Explore Shapes & Find Probabilities",
+      "steps": [
+        "Choose Find Probability.",
+        "Enter the mean and standard deviation.",
+        "Select the probability type (below, above, or between) and enter the boundary value or values."
+      ],
+      "interpret": "The shaded area represents the probability. Describe that area using the variable and units from the problem.",
+      "videos": [
+        {
+          "label": "Watch the example",
+          "url": "https://youtu.be/uxIg6_TSWCY"
+        }
+      ],
+      "screenshots": [
+        {
+          "src": "assets/image12.png",
+          "alt": "Normal probability controls showing mean, standard deviation, probability type, and a boundary value x."
+        }
+      ],
+      "courseNote": "For the standard normal distribution, use mean = 0 and standard deviation = 1.",
+      "inputs": "Mean, standard deviation, and boundary value or values.",
+      "keywords": "normal probability z score area below above between",
+      "objectiveCodes": []
+    },
+    {
+      "id": "normal-percentile",
+      "category": "probability",
+      "title": "Normal percentiles & quartiles",
+      "useWhen": "You know a percentage or probability and want the corresponding value in a normal distribution.",
+      "appName": "Normal Distribution",
+      "appUrl": "https://artofstat.com/web-apps",
+      "location": "Distributions: Explore Shapes & Find Probabilities",
+      "steps": [
+        "Choose Find Percentile/Quantile.",
+        "Enter the mean and standard deviation.",
+        "Choose the percentile type and enter the probability in the format requested by the app."
+      ],
+      "interpret": "The output is a cutoff value. State what percentage lies below or above it, using the tail you selected.",
+      "videos": [
+        {
+          "label": "Watch the example",
+          "url": "https://youtu.be/uxIg6_TSWCY?t=125"
+        }
+      ],
+      "screenshots": [
+        {
+          "src": "assets/image9.png",
+          "alt": "Normal percentile controls showing mean, standard deviation, Lower Tail, and a probability field labeled in percent."
+        }
+      ],
+      "courseNote": "For the standard normal distribution, use mean = 0 and standard deviation = 1. Check whether the input field requests a percent (95) or a decimal (0.95).",
+      "inputs": "Mean, standard deviation, and the desired percentile or tail probability.",
+      "keywords": "normal inverse percentile quartile cutoff",
+      "objectiveCodes": []
+    },
+    {
+      "id": "one-mean-interval",
+      "category": "estimate",
+      "title": "One-mean t-interval",
+      "useWhen": "You estimate a population mean using one sample and an unknown population standard deviation.",
+      "appName": "Inference for a Mean",
+      "appUrl": "https://artofstat.com/web-apps",
+      "location": "Confidence Intervals & Significance Tests (One Sample)",
+      "steps": [
+        "Choose the Confidence Interval & Significance Test tab.",
+        "Select the Enter Data option appropriate to your assignment and enter the sample information. The screenshot uses a built-in textbook example.",
+        "Under Type of Inference, select Confidence Interval.",
+        "For a usual two-sided interval, select Two-Sided under Bounds; use another choice only if your assignment requests it.",
+        "Enter the assigned Confidence Level (%) as a percentage, such as 95 for 95%.",
+        "Read the Lower Bound and Upper Bound in the Confidence Interval table."
+      ],
+      "interpret": "Interpret the interval as an estimate of the population mean, in the units of the variable.",
+      "videos": [
+        {
+          "label": "Watch the example",
+          "url": "https://youtu.be/lUk4R-oL1o4"
+        }
+      ],
+      "screenshots": [
+        {
+          "src": "assets/one-mean-interval-setup.png",
+          "alt": "Inference for a Population Mean with Confidence Interval, Two-Sided bounds, and 95 percent confidence selected. The Airbnb example has n = 50, sample mean 105.94 dollars, sample standard deviation 56.40 dollars, and confidence interval 89.91 to 121.97 dollars.",
+          "featured": true,
+          "caption": "Example calculator screen. Your assignment’s data and settings may differ."
+        }
+      ],
+      "courseNote": "The screenshot demonstrates the settings with a built-in Airbnb dataset. Replace that example with your assignment’s sample. Its displayed 95% interval is $89.91 to $121.97.",
+      "inputs": "Sample data or sample mean, sample standard deviation, sample size, and confidence level.",
+      "keywords": "one sample t interval confidence mean",
+      "objectiveCodes": []
+    },
+    {
+      "id": "one-proportion-interval",
+      "category": "estimate",
+      "title": "One-proportion z-interval",
+      "useWhen": "You estimate one population proportion from sample successes and a sample size.",
+      "appName": "Inference for a Proportion",
+      "appUrl": "https://artofstat.com/web-apps",
+      "location": "Confidence Intervals & Significance Tests (One Sample)",
+      "steps": [
+        "Choose Confidence Interval & Significance Test.",
+        "Enter the number of successes and sample size.",
+        "Choose the confidence level and WALD interval method."
+      ],
+      "interpret": "Interpret the interval as an estimate of the population proportion in context.",
+      "videos": [
+        {
+          "label": "Watch the example",
+          "url": "https://youtu.be/Etk615NLyB8"
+        }
+      ],
+      "screenshots": [
+        {
+          "src": "assets/image6.png",
+          "alt": "Inference for a population proportion app with a Confidence Interval & Significance Test tab."
+        }
+      ],
+      "courseNote": "For this course: use WALD for the interval method.",
+      "inputs": "Number of successes, sample size, and confidence level.",
+      "keywords": "one proportion confidence z interval Wald",
+      "objectiveCodes": []
+    },
+    {
+      "id": "two-proportion-interval",
+      "category": "estimate",
+      "title": "Two-proportion z-interval",
+      "useWhen": "You estimate the difference between two population proportions using independent samples.",
+      "appName": "Compare Two Proportions",
+      "appUrl": "https://artofstat.com/web-apps",
+      "location": "Confidence Intervals & Tests Comparing Two Groups",
+      "steps": [
+        "Open Compare Two Proportions.",
+        "Use the linked video for the two-proportion interval procedure.",
+        "Enter both samples and select WALD for the interval method."
+      ],
+      "interpret": "Interpret the interval for the difference in proportions. Keep the group order consistent when explaining a positive or negative difference.",
+      "videos": [
+        {
+          "label": "Watch the example",
+          "url": "https://youtu.be/uH9e6ktiy2Y?si=ZY_DU7pECK1xbK1M&t=168"
+        }
+      ],
+      "screenshots": [],
+      "courseNote": "For this course: use WALD for the interval method.",
+      "inputs": "Success counts and sample sizes for both groups, plus a confidence level.",
+      "keywords": "two proportions confidence interval difference Wald",
+      "objectiveCodes": []
+    },
+    {
+      "id": "one-proportion-test",
+      "category": "test",
+      "title": "One-proportion z-test",
+      "useWhen": "You test a claim about one population proportion.",
+      "appName": "Inference for a Proportion",
+      "appUrl": "https://artofstat.com/web-apps",
+      "location": "Confidence Intervals & Significance Tests (One Sample)",
+      "steps": [
+        "Open Inference for a Proportion.",
+        "Enter the sample information and hypothesized proportion.",
+        "Select the alternative hypothesis and SCORE test method; follow the linked example."
+      ],
+      "interpret": "Compare the p-value with the assigned significance level, then state what the evidence says about the claim.",
+      "videos": [
+        {
+          "label": "Watch the example",
+          "url": "https://youtu.be/_2U-FBb6464?si=8C9M8ELycr4oM4kh"
+        }
+      ],
+      "screenshots": [],
+      "courseNote": "For this course: use SCORE for the test method.",
+      "inputs": "Success count, sample size, null proportion, alternative hypothesis, and significance level.",
+      "keywords": "one proportion hypothesis z test Score",
+      "objectiveCodes": []
+    },
+    {
+      "id": "two-proportion-test",
+      "category": "test",
+      "title": "Two-proportion z-test",
+      "useWhen": "You test whether two population proportions differ using independent samples.",
+      "appName": "Compare Two Proportions",
+      "appUrl": "https://artofstat.com/web-apps",
+      "location": "Confidence Intervals & Tests Comparing Two Groups",
+      "steps": [
+        "Open Compare Two Proportions.",
+        "Enter both groups and select the alternative hypothesis.",
+        "Select SCORE for the test method; follow the linked example."
+      ],
+      "interpret": "Use the p-value to evaluate evidence of a difference. Name the groups and preserve their order.",
+      "videos": [
+        {
+          "label": "Watch the example",
+          "url": "https://youtu.be/o-asOEskLl4?si=8S6SskBZZu9SbjEc&t=219"
+        }
+      ],
+      "screenshots": [],
+      "courseNote": "For this course: use SCORE for the test method.",
+      "inputs": "Success counts and sample sizes for both groups, alternative hypothesis, and significance level.",
+      "keywords": "two proportion hypothesis test Score",
+      "objectiveCodes": []
+    },
+    {
+      "id": "independent-t",
+      "category": "test",
+      "title": "Independent two-sample t-test",
+      "useWhen": "You compare population means for two independent groups.",
+      "appName": "Compare Two Means",
+      "appUrl": "https://artofstat.com/web-apps",
+      "location": "Confidence Intervals & Tests Comparing Two Groups",
+      "steps": [
+        "Choose Confidence Interval & Significance Test.",
+        "Enter the two independent samples using the available input option.",
+        "Select the alternative hypothesis and follow the linked example."
+      ],
+      "interpret": "Use the p-value to evaluate evidence of a difference between population means. Keep the group order and units clear.",
+      "videos": [
+        {
+          "label": "Watch the example",
+          "url": "https://youtu.be/OsePK0_4R6E"
+        }
+      ],
+      "screenshots": [
+        {
+          "src": "assets/image5.png",
+          "alt": "Compare Two Population Means app tabs for Confidence Interval & Significance Test and Two Dependent Samples."
+        }
+      ],
+      "courseNote": "",
+      "inputs": "Two independent samples or their summary statistics, plus the assigned test settings.",
+      "keywords": "independent two sample t test means",
+      "objectiveCodes": []
+    },
+    {
+      "id": "paired-t",
+      "category": "test",
+      "title": "Matched / paired t-test",
+      "useWhen": "You compare two measurements from the same people or explicitly matched pairs.",
+      "appName": "Compare Two Means",
+      "appUrl": "https://artofstat.com/web-apps",
+      "location": "Confidence Intervals & Tests Comparing Two Groups",
+      "steps": [
+        "Choose Two Dependent Samples.",
+        "Enter the matched measurements, keeping each pair aligned.",
+        "Follow the paired t-test video and use the assigned alternative hypothesis."
+      ],
+      "interpret": "Interpret the test in terms of the population mean of the paired differences. Define which measurement is subtracted from which.",
+      "videos": [
+        {
+          "label": "Watch the example",
+          "url": "https://youtu.be/rNJ0bt9XqL0"
+        }
+      ],
+      "screenshots": [
+        {
+          "src": "assets/image5.png",
+          "alt": "Compare Two Population Means app with the Two Dependent Samples tab for paired data."
+        }
+      ],
+      "courseNote": "",
+      "inputs": "Two matched columns of quantitative measurements.",
+      "keywords": "matched paired dependent before after t test",
+      "objectiveCodes": []
+    },
+    {
+      "id": "chi-gof",
+      "category": "test",
+      "title": "Chi-square goodness-of-fit",
+      "useWhen": "You compare observed counts for one categorical variable with a claimed distribution.",
+      "appName": "Chi-Squared Test",
+      "appUrl": "https://artofstat.com/web-apps",
+      "location": "Inference for Comparing Several Groups",
+      "steps": [
+        "Open Chi-Squared Test.",
+        "Use the linked video for the goodness-of-fit procedure.",
+        "Enter observed category counts and the expected distribution requested by the app."
+      ],
+      "interpret": "Use the p-value to evaluate whether the category distribution differs from the claimed distribution.",
+      "videos": [
+        {
+          "label": "Watch the example",
+          "url": "https://youtu.be/XNspzh034ww?si=29DTSClS9RWxrecP"
+        }
+      ],
+      "screenshots": [],
+      "courseNote": "",
+      "inputs": "Observed category counts and hypothesized category proportions or expected counts.",
+      "keywords": "chi square goodness of fit GOF one categorical",
+      "objectiveCodes": []
+    },
+    {
+      "id": "chi-independence",
+      "category": "test",
+      "title": "Chi-square test of independence",
+      "useWhen": "You examine whether two categorical variables are associated.",
+      "appName": "Chi-Squared Test",
+      "appUrl": "https://artofstat.com/web-apps",
+      "location": "Inference for Comparing Several Groups",
+      "steps": [
+        "Open Chi-Squared Test.",
+        "Use the independence-test example that matches your data format.",
+        "Enter the two-way table or data as demonstrated in the video."
+      ],
+      "interpret": "Use the p-value to evaluate evidence of an association. An association alone does not establish cause and effect.",
+      "videos": [
+        {
+          "label": "Watch example 1",
+          "url": "https://youtu.be/5OU5yo8lCp8?si=9sooKDc7Stfo-rvc"
+        },
+        {
+          "label": "Watch example 2",
+          "url": "https://youtu.be/d7u9RkCX5T4?si=4omH9pZgxuC05y0y"
+        },
+        {
+          "label": "Watch example with data",
+          "url": "https://youtu.be/dbJEJqEzBoA?si=6iDOQMFHxvRkXzgG"
+        }
+      ],
+      "screenshots": [],
+      "courseNote": "",
+      "inputs": "Counts in a two-way table, or categorical data using the format in the video.",
+      "keywords": "chi square independence association two categorical contingency table",
+      "objectiveCodes": []
+    },
+    {
+      "id": "anova",
+      "category": "test",
+      "title": "One-way ANOVA",
+      "useWhen": "You compare population means across three or more independent groups.",
+      "appName": "ANOVA (One-Way)",
+      "appUrl": "https://artofstat.com/web-apps",
+      "location": "Inference for Comparing Several Groups",
+      "steps": [
+        "Open ANOVA (One-Way).",
+        "Use the linked video to enter the group data.",
+        "Run the analysis using your assignment’s settings."
+      ],
+      "interpret": "A significant result provides evidence that not all population means are equal. It does not by itself tell you which groups differ.",
+      "videos": [
+        {
+          "label": "Watch the example",
+          "url": "https://youtu.be/jwARx2_ttaY?si=APxNFSom6sNT_e2s"
+        }
+      ],
+      "screenshots": [],
+      "courseNote": "",
+      "inputs": "Quantitative measurements with their group labels.",
+      "keywords": "ANOVA three more groups means",
+      "objectiveCodes": []
+    },
+    {
+      "id": "regression",
+      "category": "relationships",
+      "title": "Linear regression",
+      "useWhen": "You model the relationship between two quantitative variables or predict y from x.",
+      "appName": "Linear Regression",
+      "appUrl": "https://artofstat.com/web-apps",
+      "location": "Association, Correlation & Regression",
+      "steps": [
+        "Choose Fit Linear Regression Model.",
+        "Enter paired x and y observations and identify the explanatory and response variables.",
+        "Read the fitted equation and follow the linked example."
+      ],
+      "interpret": "Explain the slope in context and use the model only where it is appropriate. A relationship alone does not establish causation.",
+      "videos": [
+        {
+          "label": "Watch the example",
+          "url": "https://youtu.be/mVq6f4GbvyU?si=pKICew8hVfX_-Gbb"
+        }
+      ],
+      "screenshots": [
+        {
+          "src": "assets/image2.png",
+          "alt": "Linear Regression app with Fit Linear Regression Model and Fitted Values & Residual Analysis tabs."
+        }
+      ],
+      "courseNote": "",
+      "inputs": "Paired quantitative observations for x and y.",
+      "keywords": "regression slope prediction correlation scatterplot",
+      "objectiveCodes": [],
+      "resources": [
+        {
+          "label": "Read the example explanation",
+          "url": "https://docs.google.com/presentation/d/1a27hg79fCXU8wi8D84cLL2kbz2gQElfyxzRZyMrx3k0/edit?usp=sharing"
+        }
+      ]
+    }
+  ]
+}
