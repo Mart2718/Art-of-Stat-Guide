@@ -1,0 +1,11 @@
+{
+  "name": "art-of-stat-student-hub",
+  "version": "1.0.0",
+  "private": true,
+  "description": "STAT C1000 Art of Stat student guide",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/build.mjs"
+  },
+  "engines": {"node": ">=22"}
+}
