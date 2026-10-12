@@ -25,7 +25,7 @@ for (const t of content.tools) {
   assert(Array.isArray(t.steps) && t.steps.length,`${t.id} needs steps`); t.steps.forEach(s => text(s,`${t.id} step`));
   for (const key of ['videos','screenshots','objectiveCodes']) assert(Array.isArray(t[key]),`${t.id}.${key} must be an array`);
   for (const link of [...t.videos,...(t.resources || [])]) { text(link.label,'link label'); url(link.url,'resource url'); }
-  for (const image of t.screenshots) { text(image.alt,'image alt'); assert(/^assets\/[a-zA-Z0-9._-]+$/.test(image.src),'Image must be inside assets/'); assert(fs.existsSync(path.join(root,'site',image.src)),`Missing image ${image.src}`); }
+  for (const image of t.screenshots) { text(image.alt,'image alt'); assert(/^assets\/[a-zA-Z0-9._-]+$/.test(image.src),'Image must be inside assets/'); assert(fs.existsSync(path.join(root,'site',image.src.replace('assets/','assests/'))),`Missing image ${image.src}`); }
 }
 assert(chooser.nodes && chooser.nodes[chooser.start],'Missing chooser starting node');
 for (const [id,node] of Object.entries(chooser.nodes)) {
@@ -62,12 +62,12 @@ html = html.replace('<title>Art of Stat Student Hub | STAT C1000</title>',`<titl
 html = html.replace('Art of Stat Student Hub · STAT C1000',`${esc(content.site.title)} · ${esc(content.site.course)} · Updated ${esc(content.site.updated)}`);
 fs.mkdirSync(path.join(root,'dist'),{recursive:true});
 fs.writeFileSync(path.join(root,'dist/index.html'),html);
-fs.cpSync(path.join(root,'site/assets'),path.join(root,'dist/assets'),{recursive:true});
+fs.cpSync(path.join(root,'site/assests'),path.join(root,'dist/assets'),{recursive:true});
 console.log(`Built ${content.tools.length} tools; validated ${visited.size} chooser nodes. Output: dist/`);
 // Self-contained preview: displays the same page without requiring its asset folder.
 let preview = html;
 for (const tool of content.tools) for (const image of tool.screenshots) {
-  const bytes = fs.readFileSync(path.join(root, 'site', image.src));
+  const bytes = fs.readFileSync(path.join(root, 'site', image.src.replace('assets/','assests/')));
   const mime = image.src.endsWith('.png') ? 'image/png' : 'image/jpeg';
   const dataUrl = `data:${mime};base64,${bytes.toString('base64')}`;
   preview = preview.replaceAll(`src="${esc(image.src)}"`, `src="${dataUrl}"`).replaceAll(`href="${esc(image.src)}"`, `href="${dataUrl}"`);
