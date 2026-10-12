@@ -3,7 +3,7 @@
     "title": "Art of Stat Student Hub",
     "course": "STAT C1000",
     "subtitle": "Find your tool. Follow the steps. Make sense of the result.",
-    "updated": "2026-10-04",
+    "updated": "2026-10-12",
     "introVideo": "https://youtu.be/qNy4MIkYrHE"
   },
   "categories": [
@@ -100,6 +100,30 @@
       "courseNote": "",
       "inputs": "A list of quantitative observations.",
       "keywords": "histogram box plot dot plot numeric numerical",
+      "objectiveCodes": []
+    },
+    {
+      "id": "compare-groups",
+      "category": "describe",
+      "title": "Compare groups: side-by-side boxplots",
+      "useWhen": "You want to describe and compare one quantitative variable across two or more groups (for example, sleep hours for people with and without a condition). This describes the sample; it does not test a claim.",
+      "appName": "Explore Quantitative Data",
+      "appUrl": "https://artofstat.com/web-apps",
+      "location": "Exploratory Data Analysis",
+      "inputs": "One quantitative variable and one grouping (categorical) variable, such as Yes/No.",
+      "steps": [
+        "Open Explore Quantitative Data and choose the Several Groups tab (not Single Variable).",
+        "Under Enter Data, select Your Own. Set Number of Groups to match your data.",
+        "Type a Variable Name (include units), a Group Name, and Group Labels separated by a comma, such as Yes, No.",
+        "Each group gets its own entry box. If your data sheet is stacked (one column of values and one column of group labels), sort or filter by the group column first, then copy only Group 1's values into the Group 1 box and only Group 2's values into the Group 2 box.",
+        "Under Choose Type of Plot, keep Boxplot selected so the groups appear side by side on the same scale.",
+        "Read the Descriptive Statistics table: it reports n, mean, standard deviation, five-number summary, and IQR for each group."
+      ],
+      "interpret": "Compare the groups using values, not just names: center (median or mean), spread (IQR, range, or standard deviation), how much the boxes overlap, shape, and any outliers. Heavy overlap with similar centers means little evidence of a difference in this sample. Describing a difference is not the same as showing it would hold for the whole population or that one variable causes the other.",
+      "courseNote": "Before you paste, check that the n in the table matches the number of values in each group. A mismatch usually means a value landed in the wrong box or the header row was copied.",
+      "videos": [],
+      "screenshots": [],
+      "keywords": "compare two groups side by side boxplot several groups grouping variable describe difference between groups stacked unstacked",
       "objectiveCodes": []
     },
     {

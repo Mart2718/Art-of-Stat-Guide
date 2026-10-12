@@ -29,7 +29,7 @@
     },
     "describe": {
       "question": "What kind of data do you have?",
-      "hint": "Quantitative data are numerical measurements or counts. Categorical data are labels or groups.",
+      "hint": "Quantitative data are numerical measurements or counts. Categorical data are labels or groups. If your data has a number for each person plus a group label (like Yes/No), you are comparing groups.",
       "options": [
         {
           "label": "Quantitative: I need summary statistics",
@@ -38,6 +38,10 @@
         {
           "label": "Quantitative: I need a graph",
           "next": "r-graphs"
+        },
+        {
+          "label": "Quantitative: compare two or more groups",
+          "next": "r-compare-groups"
         },
         {
           "label": "Categorical: I need counts or a bar graph",
@@ -191,7 +195,7 @@
         },
         {
           "label": "One category variable and quantitative measurements",
-          "next": "test-mean"
+          "next": "group-purpose"
         }
       ]
     },
@@ -314,6 +318,26 @@
         "independent-t",
         "paired-t"
       ]
+    },
+    "group-purpose": {
+      "question": "Are you describing the groups, or testing a claim about the populations?",
+      "hint": "Describing means graphs and summary statistics for the data you have. Testing means a p-value or confidence interval about the larger population. If your task asks for a graph and values like median, IQR, and overlap, you are describing.",
+      "options": [
+        {
+          "label": "Describing: graph and compare the groups",
+          "next": "r-compare-groups"
+        },
+        {
+          "label": "Testing a claim about population means",
+          "next": "test-mean"
+        }
+      ]
+    },
+    "r-compare-groups": {
+      "tools": [
+        "compare-groups"
+      ],
+      "explanation": "Use the Several Groups tab to build side-by-side boxplots and get summary statistics for each group, then compare center, spread, overlap, shape, and outliers."
     }
   }
 }
